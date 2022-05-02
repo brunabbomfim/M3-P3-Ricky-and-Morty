@@ -1,0 +1,211 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Ricky and Morty",
+      "description": "API para CRUD de personagens de Ricky and Morty, com login e cadastro de usuários. Edição, exclusão e cadastro de perdonagens.",
+      "termsOfService": "",
+      "contact": {
+        "email": "brunabomfim.bbb@gmail.com"
+      },
+      "version": "1.0.0"
+    },
+    "servers": [
+        {
+          "url": "http://localhost:3000/personagens",
+          "description": "API do Projeto 3"
+        },
+        {
+          "url": "https://api-elgeladon.herokuapp.com/personagens",
+          "description": "API do Projeto 3"
+        }
+      ],
+      "paths": {
+        "/find-personagens": {
+          "get": {
+            "summary": "Lista de todos os personagens",
+            "description": "Rota responsável por listar todos os personagens",
+            "tags": ["Personagens"],
+            "responses": {
+              "404": {
+                "description": "Not Found"
+              },
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Personagem"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/find-personagem/{id}": {
+          "get": {
+            "summary": "Busca um personagem pelo ID",
+            "description": "Rota responsável por buscar um personagem pelo ID",
+            "tags": ["Personagens"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do personagem para a busca",
+                "required": true
+              }
+            ],
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Personagem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/create": {
+          "post": {
+            "summary": "Cadastrar um personagem",
+            "description": "Rota responsável por cadastrar um personagem",
+            "tags": ["Personagens"],
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Personagem"
+                  },
+                  "examples": {
+                    "Personagens": {
+                      "value": {
+                        "nome": "Morty Smith",
+                        "descricao": "Ele é neto de Rick e muitas vezes é forçado a acompanhá-lo em suas várias desventuras.",
+                        "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/e/ee/Morty501.png/revision/latest/scale-to-width-down/350?cb=20210827150137"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "201": {
+                "description": "Created",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Personagem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/update/{id}": {
+          "put": {
+            "summary": "Editar um personagem pelo ID",
+            "description": "Rota responsável por editar um personagem pelo ID",
+            "tags": ["Personagens"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do personagem para a busca",
+                "required": true
+              }
+            ],
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Personagem"
+                  },
+                  "examples": {
+                    "Personagens": {
+                      "value": {
+                        "nome": "Morty Smith Editado",
+                        "descricao": "Ele é neto de Rick e muitas vezes é forçado a acompanhá-lo em suas várias desventuras.",
+                        "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/e/ee/Morty501.png/revision/latest/scale-to-width-down/350?cb=20210827150137"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "$ref": "#/components/schemas/Personagem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "/delete/{id}": {
+          "delete": {
+            "summary": "Apagar um personagem pelo ID",
+            "description": "Rota responsável por apagar um personagem pelo ID",
+            "tags": ["Personagens"],
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "description": "Id do personagem para deleção",
+                "required": true
+              }
+            ],
+            "responses": {
+              "400": {
+                "description": "Bad Request"
+              },
+              "200": {
+                "description": "OK"
+              }
+            }
+          }
+        }  
+    },
+    "components": {
+        "schemas": {
+          "Personagens": {
+            "type": "object",
+            "properties": {
+              "nome": {
+                "type": "string"
+              },
+              "descricao": {
+                "type": "string"
+              },
+              "imagem": {
+                "type": "string"
+              }
+            }
+          }
+        }
+    } 
+}

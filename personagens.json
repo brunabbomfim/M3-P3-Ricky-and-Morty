@@ -1,0 +1,22 @@
+[
+    {
+      "nome": "Morty Smith",
+      "descricao": "Ele é neto de Rick e muitas vezes é forçado a acompanhá-lo em suas várias desventuras.",
+      "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/e/ee/Morty501.png/revision/latest/scale-to-width-down/350?cb=20210827150137"
+    },
+    {
+      "nome": "Rick Sanchez",
+      "descricao": "Ele é um cientista megagênio [4] cujo alcoolismo e comportamento imprudente e niilista são fontes de preocupação para a família de sua filha, bem como para a segurança de seu filho, Morty .",
+      "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png/revision/latest/scale-to-width-down/350?cb=20160923150728"
+    },
+    {
+      "nome": "Summer Smith",
+      "descricao": "Ela atualmente atua como a irmã mais velha e a neta do Morty e Rick, respectivamente, da Dimensão Cronenberged e da Dimensão C-137 . Ela é o único outro membro conhecido da Família Smith a estar ciente desse fato.",
+      "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/a/ad/Summer_is_cool.jpeg/revision/latest/scale-to-width-down/328?cb=20160919183158"
+    },
+    {
+        "nome": "Jerry Smith",
+        "descricao": "Jerry Smith é um pai tradicional que tenta manter o controle de sua casa, mas, desde a chegada de seu sogro, Rick Sanchez, é quase impossível.",
+        "imagem": "https://static.wikia.nocookie.net/rickandmorty/images/f/f1/Jerry_Smith.png/revision/latest/scale-to-width-down/340?cb=20160923151111"
+    }
+  ]

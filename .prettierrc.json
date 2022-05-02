@@ -1,0 +1,11 @@
+{
+    "traillingComa": "all",
+    "singleQuote": true,
+    "endOfline": "lf",
+    "tabWidth": 2, 
+    "arrowsParens": "always",
+    "printWidth": 80
+}
+
+
+  
