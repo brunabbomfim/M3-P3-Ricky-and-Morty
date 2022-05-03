@@ -11,8 +11,8 @@ const { validId , validObjectBody } = require('../middlewares/personagens.middle
 // Chamando as funções do controller
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
-router.get('/find-personagens', personagensController.findPersonagensController);
-router.get('/find-personagem/:id', validId, personagensController.findPersonagemByIdController);
+router.get('/', personagensController.findPersonagensController);
+router.get('/find/:id', validId, personagensController.findPersonagemByIdController);
 router.post('/create', validObjectBody, personagensController.createPersonagemController);
 router.put('/update/:id', validId , validObjectBody, personagensController.updatePersonagemController);
 router.delete('/delete/:id', validId, personagensController.deletePersonagemController)
