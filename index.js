@@ -10,9 +10,6 @@ app.use(cors()); // Reconhecendo o cors nas requisições
 app.use(express.json()); // Reconhecendo o formato JSON nas requisições
 app.use('/personagens', route); // Conecta a todas as rotas relacionadas a "personagens"
 
-app.get('/', (req,res) => {
-    res.send('Hello Word!')
-});
 app.listen(port, () => {
     console.log(`Servidor rodando em https: localhost: ${port}`);
 });
