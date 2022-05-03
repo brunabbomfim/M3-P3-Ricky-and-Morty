@@ -21,6 +21,7 @@
   "homepage": "https://github.com/brunabbomfim/M3-P3-Ricky-and-Morty#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.3.1",
     "swagger-ui-express": "^4.3.0"

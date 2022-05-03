@@ -1,6 +1,7 @@
 const express = require('express'); //Declaração require para importar o express
+require('dotenv').config();//Declaração require para importar o dotenv
 const cors = require('cors'); //Declaração require para importar o cors
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express(); // Execução do express
 const route = require('./src/routes/personagens.routes'); //Declaração require para importar a pasta routes
 const connectToDatabase = require('./src/database/database'); //Declaração require para importar a pasta database
