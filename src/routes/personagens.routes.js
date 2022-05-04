@@ -9,12 +9,12 @@ const personagensController = require('../controllers/personagens.controller');
 const { validId , validObjectBody } = require('../middlewares/personagens.middlewares')
 
 // Chamando as funções do controller
-router.get('/all', personagensController.findPersonagensController);
-router.get('/find/:id', validId, personagensController.findPersonagemByIdController);
-router.post('/create', validObjectBody, personagensController.createPersonagemController);
-router.put('/update/:id', validId , validObjectBody, personagensController.updatePersonagemController);
-router.delete('/delete/:id', validId, personagensController.deletePersonagemController);
-router.use('/api-docs', swaggerUi.serve);
-router.get('/api-docs', swaggerUi.setup(swaggerDocument));
+router.get('/characters/all', personagensController.findPersonagensController);
+router.get('/characters/find/:id', validId, personagensController.findPersonagemByIdController);
+router.post('/characters/create', validObjectBody, personagensController.createPersonagemController);
+router.put('/characters/update/:id', validId , validObjectBody, personagensController.updatePersonagemController);
+router.delete('/characters/delete/:id', validId, personagensController.deletePersonagemController);
+router.use('/characters/api-docs', swaggerUi.serve);
+router.get('/characters/api-docs', swaggerUi.setup(swaggerDocument));
 // Exportando as funções
 module.exports = router;

@@ -13,7 +13,7 @@ app.use(cors()); // Reconhecendo o cors nas requisições
 app.use(express.json()); // Reconhecendo o formato JSON nas requisições
 connectToDatabase(); // Chamando a função
 
-app.use('/characters', route); // Conecta a todas as rotas relacionadas a "personagens"
+app.use(route); // Conecta a todas as rotas relacionadas a "personagens"
 app.use('/users', userRoute); 
 app.use("/auth", authRoute);
 
