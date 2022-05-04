@@ -9,7 +9,7 @@ const personagensController = require('../controllers/personagens.controller');
 const { validId , validObjectBody } = require('../middlewares/personagens.middlewares')
 
 // Chamando as funções do controller
-router.get('/', personagensController.findPersonagensController);
+router.get('/all', personagensController.findPersonagensController);
 router.get('/find/:id', validId, personagensController.findPersonagemByIdController);
 router.post('/create', validObjectBody, personagensController.createPersonagemController);
 router.put('/update/:id', validId , validObjectBody, personagensController.updatePersonagemController);
